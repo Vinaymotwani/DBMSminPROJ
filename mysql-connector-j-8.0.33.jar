@@ -1,0 +1,16 @@
+-- 1. Create the database (if it doesn't already exist)
+CREATE DATABASE IF NOT EXISTS employee_mng10;
+
+-- 2. Select the database to work within it
+USE employee_mng10;
+-- 3. Create the employee table
+CREATE TABLE employee (
+    emp_id INT AUTO_INCREMENT PRIMARY KEY,
+    emp_name VARCHAR(100) NOT NULL,
+    emp_email VARCHAR(100) UNIQUE,
+    emp_mobile VARCHAR(15),
+    emp_dep VARCHAR(50),
+    emp_role VARCHAR(50)
+);
+-- 4. Verify the table structure
+DESCRIBE employee;
